@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-D0SfkDIG.js";var t,n,r;function i(){return(i=e((()=>{t={title:`Form/Button`},n={render:e=>`<button class="button"${e.disabled?` disabled`:``}>${e.caption}</button>`,args:{caption:`Click me`,disabled:!1}},r=[`Button`]})))()}i();export{n as Button,r as __namedExportsOrder,t as default};
