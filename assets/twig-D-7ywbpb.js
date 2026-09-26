@@ -1256,10 +1256,10 @@ style="display:none;visibility:hidden"></iframe></noscript>
                     <div>
                         <div>
                             <span>Recent</span>
-                            <a href="/7day{{ ext }}" class="dt7">This Week</a>
-                            <a href="/30day{{ ext }}" class="dt30">This Month</a>
-                            <a href="/90day{{ ext }}" class="dt90">This Quarter</a>
-                            <a href="/365day{{ ext }}" class="dt365">This Year</a>
+                            <a href="/7day{{ ext }}" class="dt7">Past Week</a>
+                            <a href="/30day{{ ext }}" class="dt30">Past Month</a>
+                            <a href="/90day{{ ext }}" class="dt90">Past Quarter</a>
+                            <a href="/365day{{ ext }}" class="dt365">Past Year</a>
                         </div>
                         <div>
                             <span>Best of the year</span>
@@ -1743,8 +1743,8 @@ https://store.steampowered.com/search/?sort_by=Reviews_DESC&amp;category1=998&am
 {% block score_heading %}{% endblock %}
 `})))()}var He;function Ue(){return(Ue=n((()=>{He=`{% extends 'layout/ranking.twig' %}
 
-{% block title %}Top {{ games|length }} best Steam Games this {{ ranking.periodName }}{% endblock %}
-{% block heading %}{{ ranking.periodName|title }} Top {{ games|length }} Games Ranking{% endblock %}
+{% block title %}Top {{ games|length }} best Steam Games of the past {{ ranking.periodName }}{% endblock %}
+{% block heading %}Top {{ games|length }} Games of the Past {{ ranking.periodName|title }}{% endblock %}
 
 {% block main %}
     <p>
@@ -1754,15 +1754,15 @@ https://store.steampowered.com/search/?sort_by=Reviews_DESC&amp;category1=998&am
 {% endblock %}
 
 {% block context_nav %}{% include 'nav/context/dates.twig' with {id: 'recent'} %}{% endblock %}
-{% block context_name %}{{ ranking.periodName|title }}{% endblock %}
+{% block context_name %}Past {{ ranking.periodName|title }}{% endblock %}
 
 {% block local_nav %}
 <h3>Recent</h3>
 <ol>
-    <li><a href="/7day{{ ext }}" class="dt7 {{ page.id == '7day' ? 'sel' }}">This Week</a>
-    <li><a href="/30day{{ ext }}" class="dt30 {{ page.id == '30day' ? 'sel' }}">This Month</a>
-    <li><a href="/90day{{ ext }}" class="dt90 {{ page.id == '90day' ? 'sel' }}">This Quarter</a>
-    <li><a href="/365day{{ ext }}" class="dt365 {{ page.id == '365day' ? 'sel' }}">This Year</a>
+    <li><a href="/7day{{ ext }}" class="dt7 {{ page.id == '7day' ? 'sel' }}">Past Week</a>
+    <li><a href="/30day{{ ext }}" class="dt30 {{ page.id == '30day' ? 'sel' }}">Past Month</a>
+    <li><a href="/90day{{ ext }}" class="dt90 {{ page.id == '90day' ? 'sel' }}">Past Quarter</a>
+    <li><a href="/365day{{ ext }}" class="dt365 {{ page.id == '365day' ? 'sel' }}">Past Year</a>
 </ol>
 {% endblock %}
 `})))()}var We;function Ge(){return(Ge=n((()=>{We=`{% extends 'layout/template.twig' %}
