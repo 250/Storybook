@@ -215,8 +215,8 @@ import{a as e,i as t,n,r,t as i}from"./rolldown-runtime-D0SfkDIG.js";var a;funct
 {% block body %}
 <section>
     <div id="header">
-        <div class="title" data-title="Club 250">
-            <h1>Club 250</h1>
+        <div class="title" data-title="Steam 250">
+            <h1>Steam 250</h1>
         </div>
     </div>
     <div class="collage">
@@ -284,8 +284,8 @@ import{a as e,i as t,n,r,t as i}from"./rolldown-runtime-D0SfkDIG.js";var a;funct
         <span class="subtitle">Postgres support channel</span>
         <p>
             Special thanks to everyone who helps out in #postgresql with extra special thanks to
-            <b>xocolatl</b> and <b>RhodiumToad</b>, without whom Club 250 would either have been impossible or just
-            a poorly-performing maintenance nightmare!
+            <b>xocolatl</b> and <b>RhodiumToad</b>, without whom our data-driven pages would either have been
+            impossible or a poorly-performing nightmare!
         </p>
     </div>
 </div>
@@ -1065,10 +1065,10 @@ Classic Tweets
         {% endif %}
 
         <section class="boxlink ico email">
-            <header>Club 250 Weekly Edition</header>
+            <header>Steam 250 Weekly Edition</header>
             <div>
                 <p>
-                    Sign up for the free Club 250 Weekly Edition to get the <strong>top 30 games of the week</strong>
+                    Sign up for the free Steam 250 Weekly Edition to get the <strong>top 30 games of the week</strong>
                     delivered directly to your inbox every seven days!
                     <a href="{{ club250 }}/email%20sub/7day">Learn more</a>
                 </p>
@@ -1276,11 +1276,11 @@ style="display:none;visibility:hidden"></iframe></noscript>
                     <div>
                         <div>
                             <a href="{{ club250 }}/join">
-                                <img src="{{ club250_static }}/img/club 250 logo x96.webp" alt="Club 250">
+                                <img src="/img/logo.webp" alt="Steam 250">
                             </a>
                             <div>
-                                <a href="{{ club250 }}/join" class="join">Join Club 250</a>
-                                <p>Discover more with a Club 250 membership</p>
+                                <a href="{{ club250 }}/join" class="join">Join Steam 250</a>
+                                <p>Discover more with a Steam 250 membership</p>
                                 <a href="{{ club250 }}/members" class="members">Club Members</a>
                             </div>
                             <div>
@@ -1851,7 +1851,8 @@ https://store.steampowered.com/search/?sort_by=Reviews_DESC&amp;category1=998&am
     </p>
     <p class="note">
         This is the free version of this page.
-        <a href="{{ club250 }}/tag/{{ ranking.tagId }}">An enhanced version of this tag is available on Club 250</a>.
+        <a href="{{ club250 }}/tag/{{ ranking.tagId }}">An enhanced version of this tag is available to
+            {{ include('@components/micro tier.twig', {tier: 1, benefit: 'tag'}) }} members</a>.
         The enhanced version includes 250 results, an extensive tag description and a map of correlated tags.
     </p>
 {% endblock %}
