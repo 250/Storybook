@@ -204,24 +204,19 @@ import{a as e,i as t,n,r,t as i}from"./rolldown-runtime-D0SfkDIG.js";var a;funct
     </p>
 {% endblock %}
 `})))()}var _;function v(){return(v=n((()=>{_=`{% extends 'layout/skeleton.twig' %}
+{% import 'macro/steam.twig' as steam %}
 
 {% block title %}Collage{% endblock %}
 
 {% block css %}
     <link rel="stylesheet" href="css/collage.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
 {% endblock %}
 
 {% block body %}
 <section>
-    <div id="header">
-        <div class="title" data-title="Steam 250">
-            <h1>Steam 250</h1>
-        </div>
-    </div>
     <div class="collage">
     {% for game in games -%}
-        <img src="http://cdn.akamai.steamstatic.com/steam/apps/{{ game.id }}/capsule_sm_120.jpg">
+        {{ steam.app_capsule(game, false) }}
     {%- endfor %}
     </div>
 </section>
@@ -1492,10 +1487,14 @@ https://store.steampowered.com/search/?sort_by=Reviews_DESC&amp;category1=998&am
 {%- endif %}
 {% endmacro %}
 
-{% macro app_capsule(app) %}
-<img alt="logo" class="lazy" data-src="//shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/
+{% macro app_capsule_url(app) -%}
+    //shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/
     {{- app.id }}/{{ app.capsule_hash }}/capsule_231x87
-    {{- app.capsule_alt is not null ? '_alt_assets_' ~ app.capsule_alt }}.jpg">
+    {{- app.capsule_alt is not null ? '_alt_assets_' ~ app.capsule_alt }}.jpg
+{%- endmacro %}
+
+{% macro app_capsule(app, lazy=true) %}
+<img alt="logo" {{ lazy ? 'class="lazy" data-' : '' }}src="{{ _self.app_capsule_url(app) }}">
 {% endmacro %}
 `})))()}var he;function ge(){return(ge=n((()=>{he=`{% extends 'layout/ranking.twig' %}
 
