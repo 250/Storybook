@@ -276,7 +276,7 @@ import{a as e,i as t,n,r,t as i}from"./rolldown-runtime-D0SfkDIG.js";var a;funct
     <img src="/img/contrib/phrostbyte.jpg" alt="Phrostbyte's avatar">
     <div>
         <h2>Phrostbyte</h2>
-        <span class="subtitle">Oracle System Architect</span>
+        <span class="subtitle">Recommendation Engine Designer</span>
         <p>
             Creator of the Steam Oracle personalized game recommendation engine.
         </p>
