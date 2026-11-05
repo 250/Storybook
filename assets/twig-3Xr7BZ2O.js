@@ -1343,7 +1343,11 @@ style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                                 <div>
                                     <a href="{{ club250 }}/gotm" class="gotm">Games of the Month</a>
-                                    {{ include('@components/micro tier.twig', {tier: 1, benefit: 'gotm'}) }}
+                                    {{ include('@components/micro tier.twig', {tier: 1, benefit: 'awards'}) }}
+                                </div>
+                                <div>
+                                    <a href="{{ club250 }}/goty" class="goty">Games of the Year</a>
+                                    {{ include('@components/micro tier.twig', {tier: 1, benefit: 'awards'}) }}
                                 </div>
                             </div>
                         </div>
